@@ -4,12 +4,19 @@ import './index.css';
 import App from './App';
 import * as serviceWorker from './serviceWorker';
 
-ReactDOM.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>,
-  document.getElementById('root')
-);
+const videos = document.getElementsByTagName("video");
+
+for(let elAt = 0; elAt <  videos.length; elAt++)
+{
+  const containerController = document.createElement("div");
+  ReactDOM.render(
+    <React.StrictMode>
+      <App />
+    </React.StrictMode>,
+    containerController
+  );
+  videos[elAt].parentNode?.insertBefore(containerController, videos[elAt]);
+}
 
 // If you want your app to work offline and load faster, you can change
 // unregister() to register() below. Note this comes with some pitfalls.
