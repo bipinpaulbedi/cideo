@@ -1,16 +1,31 @@
 {
-  "short_name": "Cideo",
-  "name": "Control Video",
-  "icons": {
-    "16": "favicon.ico",
-    "48": "logo192.png",
-   "128": "logo512.png"
-  },
-  "permissions": [],
-  "manifest_version": 2,
-  "version": "0.0.1",
-  "browser_action": {
-    "default_popup": "index.html",
-    "default_title": "Control Video"
+    "manifest_version": 2,
+    "name": "Cideo Video Controller",
+    "version": "1.0.0",
+    "default_locale": "en",
+    "description": "Speed up, slow down, advance and rewind HTML5 audio/video. HTML5 video provides native APIs to accelerate playback of any video, but most implemented players either hide or limit this functionality. This extension fixes that.",
+    "icons": {
+        "16": "favicon.ico",
+        "48": "logo192.png",
+       "128": "logo512.png"
+      },
+    "author": "Bipin Paul Bedi",
+    "homepage_url": "https://www.bipinpaulbedi.com/cideo",
+    "optional_permissions": ["tabs"],
+    "permissions": ["activeTab"],
+    "content_scripts": [
+        {
+          "all_frames": true,
+          "matches": ["http://*/*", "https://*/*", "file:///*"],
+          "match_about_blank": true,
+          "exclude_matches": [
+            "https://plus.google.com/hangouts/*",
+            "https://hangouts.google.com/*",
+            "https://meet.google.com/*"
+          ],
+          "css": ["inject.css"],
+          "js": ["inject.js"]
+        }
+      ],
+      "web_accessible_resources": ["inject.css", "shadow.css"]
   }
-}
