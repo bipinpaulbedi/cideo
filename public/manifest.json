@@ -2,8 +2,7 @@
     "manifest_version": 2,
     "name": "Cideo Video Controller",
     "version": "1.0.0",
-    "default_locale": "en",
-    "description": "Speed up, slow down, advance and rewind HTML5 audio/video. HTML5 video provides native APIs to accelerate playback of any video, but most implemented players either hide or limit this functionality. This extension fixes that.",
+    "description": "Speed up, slow down, advance and rewind HTML5 audio/video even when the actual player is limiting the functionality.",
     "icons": {
         "16": "favicon.ico",
         "48": "logo192.png",
@@ -23,9 +22,9 @@
             "https://hangouts.google.com/*",
             "https://meet.google.com/*"
           ],
-          "css": ["inject.css"],
-          "js": ["inject.js"]
+          "css": ["/static/css/main.css"],
+          "js": ["/static/js/main.js"]
         }
       ],
-      "web_accessible_resources": ["inject.css", "shadow.css"]
+      "web_accessible_resources": ["/static/css/main.css"]
   }

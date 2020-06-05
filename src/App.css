@@ -1,6 +1,8 @@
 .CideoController {
-  z-index: 99;
+  z-index: 9999;
   position: relative;
-  top: 45px;
-  opacity: 0.7;
+  top: 50px;
+  opacity: 0.3;
+  background-color: #ffffff;
+  max-width: fit-content;
 }
