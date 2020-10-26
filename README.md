@@ -1,3 +1,7 @@
+Published the Chome extention @
+
+https://chrome.google.com/webstore/detail/cideo-video-controller/kmimbgejeddmhgkhiflkagmgdiekkobj
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
